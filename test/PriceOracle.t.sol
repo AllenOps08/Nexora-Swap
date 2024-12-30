@@ -129,7 +129,7 @@ contract PriceOracleTest is Test {
     // Test Unauthorized Access
     function testCannotUpdateGasLimitByNonOwner() public {
         vm.prank(user);
-        // vm.expectRevert("Not the owner");
+        vm.expectRevert("Not the owner");
         priceOracle.updateCallbackGasLimit(200000);
     }
 
