@@ -29,4 +29,5 @@ interface IGetters {
         returns (uint256);
 
     function getCurrentSwapFee() external view returns (uint256);
+    function getTokenIndex(address token) external view returns (uint256);
 }

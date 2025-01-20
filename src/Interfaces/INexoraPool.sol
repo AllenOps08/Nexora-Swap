@@ -60,7 +60,9 @@ interface INexoraPool {
 
     // Functions
 
-    function swap(uint256 tokenIndexFrom, uint256 tokenIndexTo, uint256 dx, uint256 minDy, uint256 deadline) external;
+    function swap(uint256 tokenIndexFrom, uint256 tokenIndexTo, uint256 dx, uint256 minDy, uint256 deadline)
+        external
+        returns (uint256);
     function calculateSwap(uint256 tokenIndexFrom, uint256 tokenIndexTo, uint256 dx) external view returns (uint256);
     function addLiquidity(uint256[] calldata amount, uint256 minMintAmount) external returns (uint256);
 
